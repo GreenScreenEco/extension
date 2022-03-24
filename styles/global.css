@@ -1,27 +1,76 @@
-html,
-body {
+/* Fonts */
+
+@font-face {
+  font-family: Readex Pro;
+  src: url("/fonts/ReadexPro-Medium.ttf");
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: Readex Pro;
+  src: url("/fonts/ReadexPro-bold.ttf");
+  font-weight: bold;
+}
+
+/* Shared Theme */
+
+:root {
+  --theme-green: #E6FECC;
+  --theme-green-alt: #80C080;
+  --theme-fg-most: #FFFFFF;
+  --theme-bg-medium: #666666;
+  --theme-bg-more: #404040;
+  --theme-bg-most: #202020;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* Essential Page Setup */
+
+html, body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-  line-height: 1.6;
-  font-size: 18px;
+  font-family: Readex Pro, sans-serif;
+  font-size: 16pt;
+  color: var(--theme-fg-most);
+  background-color: var(--theme-bg-medium);
 }
 
 * {
   box-sizing: border-box;
 }
 
-a {
-  color: #0070f3;
-  text-decoration: none;
+h1, h2, h3, h4, h5, h6 {
+  margin: 0.1em;
+  width: fit-content;
+  font-weight: normal;
 }
 
-a:hover {
-  text-decoration: underline;
+h1 {
+  color: transparent;
+  background: linear-gradient(125deg, var(--theme-green) 0%, var(--theme-green-alt) 100%);
+  -webkit-background-clip: text;
 }
 
-img {
-  max-width: 100%;
-  display: block;
+h2 {
+  color: var(--theme-green);
+}
+
+h1 {font-size: 48pt;}
+
+/* Fixes */
+
+/*
+ Remove browser styling for buttons.
+ https://stackoverflow.com/a/45890842/3116659
+ */
+button, input[type="button"], input[type="submit"], input[type="reset"] {
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
 }

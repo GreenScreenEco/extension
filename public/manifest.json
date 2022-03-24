@@ -1,0 +1,25 @@
+{
+  "manifest_version": 2,
+  "name": "GreenScreen",
+  "version": "1.0",
+
+  "description": "Hold the companies you shop at accountable for sustainability.",
+
+  "icons": {
+    "16": "leaf.svg",
+    "32": "leaf.svg",
+    "48": "leaf.svg",
+    "96": "leaf.svg"
+  },
+
+  "browser_action": {
+    "default_title": "GreenScreen",
+    "default_popup": "index.html",
+    "default_icon": {
+      "16": "leaf_no_stem.svg",
+      "32": "leaf_no_stem.svg",
+      "48": "leaf_no_stem.svg",
+      "96": "leaf_no_stem.svg"
+    }
+  }
+}
