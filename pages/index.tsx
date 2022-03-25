@@ -1,12 +1,16 @@
-import Head from 'next/head'
+import Header from "../components/Header";
+import Footer from "../components/Footer";
+import {useState} from "react";
+import ScoreGauge from "../components/ScoreGauge";
 
-export default function Index() {
+export default function ExtensionMain() {
+  const [expanded, setExpanded] = useState(false);
+
   return (
-    <div>
-      <Head>
-        <title>"GreenScreen"</title>
-      </Head>
-      <h1>GreenScreen</h1>
-    </div>
+    <>
+      <Header />
+      <ScoreGauge value={10} />
+      <Footer expanded={expanded} setExpanded={setExpanded} />
+    </>
   )
 }

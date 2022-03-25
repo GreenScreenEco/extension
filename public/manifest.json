@@ -15,11 +15,7 @@
   "browser_action": {
     "default_title": "GreenScreen",
     "default_popup": "index.html",
-    "default_icon": {
-      "16": "leaf_no_stem.svg",
-      "32": "leaf_no_stem.svg",
-      "48": "leaf_no_stem.svg",
-      "96": "leaf_no_stem.svg"
-    }
+    "browser_style": true,
+    "default_icon": "leaf_no_stem.svg"
   }
 }

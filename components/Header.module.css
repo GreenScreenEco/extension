@@ -1,0 +1,14 @@
+.header {
+    height: 42pt;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--theme-bg-most);
+}
+
+.headerText {
+    font-size: 34pt;
+    color: transparent;
+    background: linear-gradient(125deg, var(--theme-green) 0%, var(--theme-green-alt) 100%);
+    -webkit-background-clip: text;
+}

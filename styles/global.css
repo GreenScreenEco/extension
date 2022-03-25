@@ -17,10 +17,10 @@
 :root {
   --theme-green: #E6FECC;
   --theme-green-alt: #80C080;
-  --theme-fg-most: #FFFFFF;
-  --theme-bg-medium: #666666;
-  --theme-bg-more: #404040;
-  --theme-bg-most: #202020;
+  --theme-fg-most: #000000;
+  --theme-bg-medium: #FFFFFF;
+  --theme-bg-more: #666666;
+  --theme-bg-most: #404040;
 }
 
 a {
@@ -48,17 +48,9 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: normal;
 }
 
-h1 {
-  color: transparent;
-  background: linear-gradient(125deg, var(--theme-green) 0%, var(--theme-green-alt) 100%);
-  -webkit-background-clip: text;
-}
-
 h2 {
   color: var(--theme-green);
 }
-
-h1 {font-size: 48pt;}
 
 /* Fixes */
 
