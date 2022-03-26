@@ -12,15 +12,25 @@
   font-weight: bold;
 }
 
+@font-face {
+  font-family: Readex Pro;
+  src: url("/fonts/ReadexPro-Light.ttf");
+  font-weight: 100;
+}
+
 /* Shared Theme */
 
 :root {
   --theme-green: #E6FECC;
   --theme-green-alt: #80C080;
+
   --theme-fg-most: #000000;
-  --theme-bg-medium: #FFFFFF;
-  --theme-bg-more: #666666;
-  --theme-bg-most: #404040;
+  --theme-fg-more: #404040;
+  --theme-fg-medium: #666666;
+  --theme-fg-least: #CCCCCC;
+
+  --theme-bg-least: #404040;
+  --theme-bg-most: #FFFFFF;
 }
 
 a {
@@ -32,10 +42,11 @@ a {
 html, body {
   padding: 0;
   margin: 0;
+  width: 280pt;
   font-family: Readex Pro, sans-serif;
   font-size: 16pt;
   color: var(--theme-fg-most);
-  background-color: var(--theme-bg-medium);
+  background-color: var(--theme-bg-most);
 }
 
 * {

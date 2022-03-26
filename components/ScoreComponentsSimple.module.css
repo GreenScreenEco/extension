@@ -1,0 +1,19 @@
+.rootContainer {
+    margin-top: 0.4em;
+    margin-bottom: 0.5em;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.scoreContainer {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.score {
+    font-size: 36pt;
+    font-weight: bold;
+}

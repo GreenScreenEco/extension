@@ -2,7 +2,7 @@
   "private": true,
   "scripts": {
     "dev": "./build.sh && web-ext run --source-dir ./out",
-    "dev-external": "next dev",
+    "dev-webpage": "next dev",
     "build": "./build.sh",
     "export": "./build.sh && cd ./out && zip -r extension.zip ./*;"
   },
