@@ -1,17 +1,17 @@
 import styles from './MainScore.module.css'
 import ScoreGauge from "./ScoreGauge";
+import {Score} from "../lib/Models";
 
 type Props = {
-  /** 0.0-10.0 */
-  value: number,
+  score: Score | null,
   /** Generally, the current website */
   scoreSubject: string,
 }
 
-export default function MainScore({value, scoreSubject}: Props) {
+export default function MainScore({score, scoreSubject}: Props) {
   return (
     <div className={styles.container}>
-      <ScoreGauge value={value} />
+      <ScoreGauge score={score} />
       <span className={styles.scoreSubject}>{scoreSubject}</span>
     </div>
   );

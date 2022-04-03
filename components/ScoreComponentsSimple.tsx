@@ -1,31 +1,31 @@
 import styles from './ScoreComponentsSimple.module.css'
-import {getRatingForValue} from "../lib/ScoreRating";
+import {getRatingForScore, scaleScoreToLocal} from "../lib/ScoreRating";
+import {Score} from "../lib/Models";
 
 type SimpleScoreProps = {
-  /** 0.0-10.0 */
-  value: number,
-  label: string,
+  score: Score,
 }
 
-function SimpleScore({value, label}: SimpleScoreProps) {
-  const scoreRating = getRatingForValue(value);
+function SimpleScore({score}: SimpleScoreProps) {
+  score = scaleScoreToLocal(score);
+  const scoreRating = getRatingForScore(score);
 
   return (
     <div className={styles.scoreContainer}>
-      <span className={styles.score} style={{color: scoreRating.color}}>{value}</span>
-      <span>{label}</span>
+      <span className={styles.score} style={{color: scoreRating.color}}>{score.value}</span>
+      <span>{score.label}</span>
     </div>
   );
 }
 
 type ScoreComponentsSimpleProps = {
-  scores: SimpleScoreProps[],
+  scores: Score[],
 }
 
 export default function ScoreComponentsSimple({scores}: ScoreComponentsSimpleProps) {
   return (
     <div className={styles.rootContainer}>
-      {scores.map(score => <SimpleScore {...score} key={score.label} />)}
+      {scores.map(score => <SimpleScore score={score} key={score.label} />)}
     </div>
   );
 }

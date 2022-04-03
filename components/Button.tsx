@@ -1,21 +1,24 @@
 import styles from './Button.module.css'
 import {ReactElement, ReactNode} from "react";
+import {cx} from "../lib/Classnames";
 
 type Props = {
   href?: string,
   onClick?: () => void,
   disabled?: boolean,
   icon?: ReactNode,
+  tooltip?: string,
   children: ReactNode,
 }
 
-export default function Button({href, onClick, disabled, icon, children}: Props): ReactElement {
+export default function Button({href, onClick, disabled, icon, tooltip, children}: Props): ReactElement {
   if (href != null) {
     return (
       <a
         href={href}
         onClick={onClick}
-        className={styles.button}>
+        title={tooltip}
+        className={cx(styles.button, disabled ? styles.disabled : null)}>
         <span>{children}</span>
         {icon}
       </a>
@@ -26,7 +29,8 @@ export default function Button({href, onClick, disabled, icon, children}: Props)
         type="button"
         onClick={onClick}
         disabled={disabled}
-        className={styles.button}>
+        title={tooltip}
+        className={cx(styles.button, disabled ? styles.disabled : null)}>
         <span>{children}</span>
         {icon}
       </button>

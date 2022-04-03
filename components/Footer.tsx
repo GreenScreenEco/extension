@@ -27,7 +27,14 @@ export default function Footer({expanded, setExpanded}: Props) {
   return (
     <div className={styles.footer}>
       <ExpandButton expanded={expanded} setExpanded={setExpanded}/>
-      <Button disabled={true} href="https://greenscreen.eco" icon={<img alt="shield" src={"shield.svg"}/>}>
+      <Button
+        disabled={true}
+        tooltip="Coming soon!"
+        href="https://greenscreen.eco"
+        icon={<img alt="shield" src={"shield.svg"} style={
+          // https://codepen.io/sosuke/pen/Pjoqqp -> #CCCCCC
+          {filter: "invert(100%) sepia(0%) saturate(2658%) hue-rotate(22deg) brightness(112%) contrast(60%)"}
+        }/>}>
         My Account
       </Button>
     </div>

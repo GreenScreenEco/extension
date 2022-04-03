@@ -12,10 +12,15 @@
     "96": "leaf.svg"
   },
 
+  "permissions": [
+    "<all_urls>",
+    "tabs"
+  ],
+
   "browser_action": {
     "default_title": "GreenScreen",
     "default_popup": "index.html",
-    "browser_style": true,
+    "browser_style": false,
     "default_icon": "leaf_no_stem.svg"
   }
 }

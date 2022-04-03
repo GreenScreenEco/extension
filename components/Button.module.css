@@ -6,3 +6,7 @@
 .button > *:not(:last-child) {
     margin-right: 0.2rem;
 }
+
+.disabled {
+    color: var(--theme-fg-least);
+}
