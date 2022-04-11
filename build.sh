@@ -1,7 +1,7 @@
 # Build the Next app into ./.next
-npx next build;
+npx next build
 # Export the Next app into ./out
-npx next export;
+npx next export
 
 # Workaround for Chrome, who prevents loading of paths starting with underscore.
 mv ./out/_next ./out/next

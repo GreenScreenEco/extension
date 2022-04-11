@@ -1,7 +1,7 @@
 {
   "private": true,
   "scripts": {
-    "dev": "./build.sh && web-ext run --source-dir ./out",
+    "dev": "./build.sh && web-ext run --verbose --source-dir ./out",
     "build": "./build.sh",
     "export": "./build.sh && cd ./out && zip -r extension.zip ./*;"
   },

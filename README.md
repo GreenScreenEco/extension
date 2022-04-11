@@ -2,11 +2,18 @@
 
 ## Building for Development
 
-1. Run `npm run build`
-2. Unpacked output is in `./out`
-3. Run `npm run dev` for a test browser
+This extension is best developed on a computer running Linux.
+
+* [1] Install node packages with `npm install`
+* [2] Run `npm run build`
+* [3] Load extension:
+    * [3a] Use `./out` for adding an unpacked extension
+    * [3b] Run `npm run dev` for a test browser
 
 ## Building for Distribution
 
-1. Run `npm run export`
-2. Packaged extension is `./out/extension.zip`
+This extension is best exported on a computer running Linux.
+
+* [1] Install node packages with `npm install`
+* [2] Run `npm run export`
+* [3] Packaged extension is `./out/extension.zip`

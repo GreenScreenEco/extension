@@ -26,7 +26,7 @@ export default function ExtensionMain() {
 
   useEffect(() => {
     if (activeTabURL != null) {
-      fetch(`http://localhost:8000/v1/scores?domain_name=${activeTabURL.host}`)
+      fetch(`https://api.greenscreen.eco/v1/scores?domain_name=${activeTabURL.host}`)
         .then(response => response.json())
         .then(data => setScoreSummary(data as ScoreSummary))
     }
