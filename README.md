@@ -14,7 +14,7 @@ This extension is best developed on a computer running Linux.
 
 This extension is best exported on a computer running Linux.
 
-* [1] Install node packages with `npm install`
+* [1] Install node packages with `npm ci` (this uses exact versions from `package-lock.json`)
 * [2] Run `npm run export`
 * [3] Packaged extension is `./out/extension.zip`
 
